@@ -2,13 +2,90 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:AppCursoXamarin"
+             xmlns:viewmodels="clr-namespace:AppCursoXamarin.ViewModels"
              x:Class="AppCursoXamarin.MainPage">
+    <!--EJEMPLO 1 -->
+    <!--
+    <ContentPage.BindingContext>
+        <viewmodels:MainPageViewModel/>
+    </ContentPage.BindingContext>
+    -->
 
+
+
+    <!--EJEMPLO INICIAL-->
+    <!--
     <StackLayout>
-        <!-- Place new controls here -->
-        <Label Text="Welcome to Xamarin.Forms!" 
-           HorizontalOptions="Center"
-           VerticalOptions="CenterAndExpand" />
+        <ListView ItemsSource="{Binding Surveys}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextCell Text="{Binding Name}"
+                              Detail="{Binding FavoriteFood}"/>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <Button Text="Agregar" x:Name="btnAgregar" Command="{Binding AddCommand}"/>
     </StackLayout>
+-->
+    <!--EJEMPLO DE PROPIEDADES ADJUNTAS-->
+    <!--<Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Button Clicked="Button_Clicked"
+            Text="Mover">
+        </Button>
+    </Grid>-->
 
+    <!--EJEMPLO 1 DE MANEJO DE EVENTOS -XAML-->
+    <!--<StackLayout>
+        <Button Text="Manejo de eventos"
+                Clicked="OnClicked" />
+        <Label x:Name="etiqueta" />
+    </StackLayout>-->
+
+    <!--EJEMPLO 2 DE MANEJO DE EVENTOS -CON CÓDIGO-->
+    <!--Creando un recurso aplicando lo visto en el video 22-->
+    <!--<ContentPage.Resources>
+        <Color x:Key="MiColor">Red</Color>
+        <x:Double x:Key="TamanioDefault">35
+        </x:Double>
+    </ContentPage.Resources>
+    <StackLayout>
+        <Button x:Name="boton" Text="{x:Static local:Literals.TituloBoton}" 
+                BackgroundColor="{StaticResource MiColor}"
+                FontSize="{StaticResource TamanioDefault}"
+                />
+        
+        <Label x:Name="etiqueta" />
+    </StackLayout>-->
+    <!--Probando StackLayout del video 24 Contenedores 
+    <StackLayout Orientation="Horizontal">
+        <BoxView Color="Red"
+		HorizontalOptions="Center" />
+        <BoxView Color="Green"
+		HorizontalOptions="Center" />
+        <BoxView Color="Blue"
+		HorizontalOptions="Center" />
+    </StackLayout>-->
+    <!--Probando Grid del video 24 Contenedores-->
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+
+        <!--si no definimos ubicación toma la fila 0 y columna 0-->
+        <BoxView Color="Red" />
+        <BoxView Color="Lime" Grid.Column="1" />
+        <BoxView Color="Blue" Grid.Row="1" />
+        <BoxView Color="Yellow" Grid.Row="1" Grid.Column="1" />
+
+    </Grid>
 </ContentPage>
