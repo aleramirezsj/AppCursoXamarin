@@ -7,6 +7,7 @@ using AppCursoXamarin.Droid.Renderers;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.Android;
 
+
 [assembly: ExportRenderer(typeof(CircularProgress), typeof(CircularProgressRenderer))]
 
 namespace AppCursoXamarin.Droid.Renderers

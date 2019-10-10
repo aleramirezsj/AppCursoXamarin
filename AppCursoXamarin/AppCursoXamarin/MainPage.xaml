@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:AppCursoXamarin"
              xmlns:viewmodels="clr-namespace:AppCursoXamarin.ViewModels"
+             xmlns:local1="clr-namespace:AppCursoXamarin.Controls"
              x:Class="AppCursoXamarin.MainPage">
     <!--EJEMPLO 1 -->
     <!--
@@ -69,7 +70,7 @@
         <BoxView Color="Blue"
 		HorizontalOptions="Center" />
     </StackLayout>-->
-    <!--Probando Grid del video 24 Contenedores-->
+    <!--Probando Grid del video 24 Contenedores
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition />
@@ -79,13 +80,66 @@
         <Grid.RowDefinitions>
             <RowDefinition />
             <RowDefinition />
-        </Grid.RowDefinitions>
+        </Grid.RowDefinitions>-->
 
-        <!--si no definimos ubicación toma la fila 0 y columna 0-->
+        <!--si no definimos ubicación toma la fila 0 y columna 0
         <BoxView Color="Red" />
         <BoxView Color="Lime" Grid.Column="1" />
         <BoxView Color="Blue" Grid.Row="1" />
         <BoxView Color="Yellow" Grid.Row="1" Grid.Column="1" />
 
-    </Grid>
+    </Grid>-->
+    <!--Prueba video 26
+    <Grid BackgroundColor="Gray">
+        <local1:CircularProgress />
+    </Grid>-->
+    <!--Prueba video 27-->
+    <ContentPage.Resources>
+        <Style x:Key="MiEstilo"
+               TargetType="Label">
+            <Setter Property="FontSize" Value="40" />
+            <Setter Property="TextColor" Value="Red" />
+            <Setter Property="HorizontalTextAlignment"
+                    Value="Center"/>
+        </Style>
+
+        <Style x:Key="OtroEstilo"
+            BasedOn="{StaticResource MiEstilo}"
+               TargetType="Label">
+            <Setter Property="RotationX"
+                       Value="40"/>
+        </Style>
+
+        <Style TargetType="Entry">
+            <Style.Triggers>
+                <Trigger TargetType="Entry" Property="IsFocused" 
+                         Value="True">
+                    <Setter Property="TextColor" Value="Red" />
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+
+        
+
+    </ContentPage.Resources>
+    <StackLayout>
+        <Label Text="Welcome to Xamarin.Forms!"
+               TextColor="Blue"
+               HorizontalOptions="Center"
+               VerticalOptions="CenterAndExpand"
+               Style="{StaticResource OtroEstilo}"/>
+
+        <Button Text="Botón">
+            <Button.Style>
+                <Style TargetType="Button">
+                    <Setter Property="TextColor"
+                        Value="Red" />
+                        </Style>
+            </Button.Style>
+        </Button>
+
+        <Entry />
+        <Entry />
+        <Entry />
+    </StackLayout>
 </ContentPage>
