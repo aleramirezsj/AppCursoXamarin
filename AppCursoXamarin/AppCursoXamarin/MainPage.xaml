@@ -4,7 +4,15 @@
              xmlns:local="clr-namespace:AppCursoXamarin"
              xmlns:viewmodels="clr-namespace:AppCursoXamarin.ViewModels"
              xmlns:local1="clr-namespace:AppCursoXamarin.Controls"
-             x:Class="AppCursoXamarin.MainPage">
+             x:Class="AppCursoXamarin.MainPage"
+             Title="Página 1">
+    <StackLayout>
+        <Label Text="Welcome to Xamarin.Forms!"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+        <Button Text="Elegir país"
+                Clicked="OnClicked" />
+    </StackLayout>
     <!--EJEMPLO 1 -->
     <!--
     <ContentPage.BindingContext>
@@ -94,6 +102,7 @@
         <local1:CircularProgress />
     </Grid>-->
     <!--Prueba video 27-->
+    <!--Prueba de estilos video 27 al 29
     <ContentPage.Resources>
         <Style x:Key="MiEstilo"
                TargetType="Label">
@@ -132,13 +141,14 @@
 
 
     </ContentPage.Resources>
+    PRUEBAS CON ESTILOS DE LOS VIDEOS 27 AL 29
     <StackLayout>
         <Label Text="Welcome to Xamarin.Forms!"
                TextColor="Blue"
                HorizontalOptions="Center"
                VerticalOptions="CenterAndExpand"
                Style="{StaticResource OtroEstilo}"/>
-        <!-- DEFINICIÓN DE BOTONES ESTABLECIENDO SU ESTILOS DE MANERA EXPLICITA  
+         DEFINICIÓN DE BOTONES ESTABLECIENDO SU ESTILOS DE MANERA EXPLICITA  
         <Button Text="Botón">
             <Button.Style>
                 <Style TargetType="Button">
@@ -146,8 +156,8 @@
                         Value="Red" />
                         </Style>
             </Button.Style>
-        </Button>-->
-        <!--DEFINICIÓN DE BOTONES USANDO ESTILOS DEFINIDOS-->
+        </Button>
+        DEFINICIÓN DE BOTONES USANDO ESTILOS DEFINIDOS
         <Button Text="Enviar"
                 Style="{StaticResource EstiloBoton}" />
 
@@ -155,5 +165,19 @@
         <Entry />
         <Entry x:Name="txtNombre"
                Text=""/>
-    </StackLayout>
+    </StackLayout> -->
+    <!--Probando animaciones y transiciones video 32-->
+    <!--<Grid>
+        <Button Text="Hola"
+                WidthRequest="200"
+                HeightRequest="40"
+                VerticalOptions="Center"
+                HorizontalOptions="Center"
+                x:Name="boton1"
+                Clicked="OnClicked"/>-->
+                <!--TranslationX="100"-->
+
+                <!--Rotation="45"-->
+
+    <!--</Grid> -->
 </ContentPage>

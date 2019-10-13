@@ -56,9 +56,15 @@ namespace AppCursoXamarin
 
         }
 
-        private void OnClicked(object sender, EventArgs e)
+        private async void OnClicked(object sender, EventArgs e)
         {
-           // etiqueta.Text += "La hora es " + DateTime.Now.ToString();
+            // etiqueta.Text += "La hora es " + DateTime.Now.ToString();
+            //código del video 30
+            //boton1.ScaleTo(2, 2000, Easing.BounceOut); 
+            //await Navigation.PushAsync(new Pagina2());
+            //await Navigation.PushModalAsync(new Pagina2());
+            var resultado = await DisplayActionSheet("Opciones", null, null, "Argentina", "Chile", "Uruguay");
+            await DisplayAlert("País seleccionado", "Es:"+resultado, "Aceptar");
         }
     }
 }

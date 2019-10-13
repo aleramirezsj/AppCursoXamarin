@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:local="clr-namespace:AppCursoXamarin"
+             mc:Ignorable="d"
+             x:Class="AppCursoXamarin.MainPageInterfacesDeNotificacion">
+    <ContentPage.Resources>
+        <local:Disco x:Key="disco1" Titulo="let it be" Banda="The Beatles s" />
+    </ContentPage.Resources>
+    <StackLayout>
+        <!-- Place new controls here -->
+        <Label Text="{Binding Titulo,Source={StaticResource disco1},Mode=OneWay}" />
+        <Label Text="{Binding Banda,Source={StaticResource disco1},Mode=OneWay}" />
+        <Button Text="Cambiar" Clicked="OnClicked"/>
+    </StackLayout>
+
+    </ContentPage>
