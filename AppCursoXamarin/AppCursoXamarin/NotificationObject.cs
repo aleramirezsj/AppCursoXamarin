@@ -15,5 +15,5 @@ namespace AppCursoXamarin
         {
             PropertyChanged?.Invoke(this,new PropertyChangedEventArgs(propertyName));
         }
-}
+    }
 }

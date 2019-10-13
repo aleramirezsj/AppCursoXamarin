@@ -32,6 +32,13 @@ namespace AppCursoXamarin
                 OnPropertyChanged();
             }
         }
+        //solución rápida en el video 36, que resuelve la falta de plantilla de datos para
+        //ajustar lo que se visualiza del listview
+        public override string ToString()
+        {
+            return $"{Titulo} {Banda}";
+        }
+
         /*(luego del refactoring al finalizar el video de interfaces de notificación, todo el 
          * siguiente código quedó implementado en la clase abstracta NotificationObject)
         public event PropertyChangedEventHandler PropertyChanged;
@@ -44,8 +51,8 @@ namespace AppCursoXamarin
             {
                 PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
             }*/
-            /*
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
-        }*/
+        /*
+        PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+    }*/
     }
 }

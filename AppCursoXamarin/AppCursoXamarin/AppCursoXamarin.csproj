@@ -20,7 +20,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Update="MainPageInterfacesDeNotificacion.xaml">
+    <EmbeddedResource Update="MainPageObservableCollection.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Pagina2.xaml">
