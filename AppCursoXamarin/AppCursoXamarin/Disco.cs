@@ -5,7 +5,7 @@ using System.Text;
 
 namespace AppCursoXamarin
 {
-    public class Disco : INotifyPropertyChanged
+    public class Disco : NotificationObject
     {
         private string titulo;
 
@@ -15,7 +15,8 @@ namespace AppCursoXamarin
             set
             {
                 titulo = value;
-                OnPropertyChanged("Titulo");
+                //este método está implementado en la clase abstracta NotificationObject
+                OnPropertyChanged();
             }
         }
 
@@ -27,10 +28,12 @@ namespace AppCursoXamarin
             set
             {
                 banda = value;
-                OnPropertyChanged("Banda");
+                //este método está implementado en la clase abstracta NotificationObject
+                OnPropertyChanged();
             }
         }
-
+        /*(luego del refactoring al finalizar el video de interfaces de notificación, todo el 
+         * siguiente código quedó implementado en la clase abstracta NotificationObject)
         public event PropertyChangedEventHandler PropertyChanged;
 
         private void OnPropertyChanged(string propertyName)
@@ -41,7 +44,8 @@ namespace AppCursoXamarin
             {
                 PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
             }*/
+            /*
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
-        }
+        }*/
     }
 }
