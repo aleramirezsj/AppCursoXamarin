@@ -16,7 +16,9 @@ namespace AppCursoXamarin
             //MainPage = new MainPageInterfacesDeNotificacion();
             //MainPage = new MainPageObservableCollection();
             //MainPage = new MainPageContextoDeEnlaceDeDatos();
-            MainPage = new MainPageReto3();
+            //MainPage = new MainPageReto3();
+            //MainPage = new MainPageEnlaceEntreElementos();
+            MainPage = new MainPageStringFormat();
         }
 
         protected override void OnStart()

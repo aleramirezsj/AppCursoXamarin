@@ -32,11 +32,37 @@ namespace AppCursoXamarin
                 OnPropertyChanged();
             }
         }
+        //para probar enlace entre elementos agregamos la propiedad genero
+        private string genero;
+
+        public string Genero
+        {
+            get { return genero; }
+            set
+            {
+                genero = value;
+                OnPropertyChanged();
+            }
+        }
+
+        private DateTime fechaLanzamiento;
+
+        public DateTime FechaLanzamiento
+        {
+            get { return fechaLanzamiento; }
+            set
+            {
+                fechaLanzamiento = value;
+                OnPropertyChanged();
+            }
+        }
+
+
         //solución rápida en el video 36, que resuelve la falta de plantilla de datos para
         //ajustar lo que se visualiza del listview
         public override string ToString()
         {
-            return $"{Titulo} {Banda}";
+            return $"{Titulo} {Banda} {Genero}";
         }
 
         /*(luego del refactoring al finalizar el video de interfaces de notificación, todo el 
