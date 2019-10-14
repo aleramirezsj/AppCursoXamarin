@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:AppCursoXamarin"
+             x:Class="AppCursoXamarin.MainPageReto3">
+    <ContentPage.Resources>
+        <local:Maquinaria x:Key="maquinaria" />
+        <Style TargetType="Label">
+            <Setter Property="VerticalOptions" Value="CenterAndExpand" />
+            <Setter Property="HorizontalOptions" Value="CenterAndExpand" />
+            <Setter Property="FontSize" Value="20"/>
+            <Setter Property="FontAttributes" Value="Bold"/>
+            <Setter Property="WidthRequest" Value="50"/>
+        </Style>
+    </ContentPage.Resources>
+
+    <Grid BindingContext="{Binding Source={StaticResource maquinaria}}">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="150"/>
+        </Grid.RowDefinitions>
+
+        <Label Text="{Binding HH, Mode=OneWay}" Grid.Column="1" Grid.Row="1"/>
+        <Label Text=":" Grid.Column="2" Grid.Row="1"/>
+        <Label Text="{Binding MM, Mode=OneWay}" Grid.Column="3" Grid.Row="1"/>
+        <Label Text=":" Grid.Column="4" Grid.Row="1"/>
+        <Label Text="{Binding SS, Mode=OneWay}" Grid.Column="5" Grid.Row="1"/>
+    </Grid>
+</ContentPage>
