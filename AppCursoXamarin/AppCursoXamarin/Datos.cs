@@ -18,6 +18,19 @@ namespace AppCursoXamarin
                 OnPropertyChanged();
             }
         }
+        //agregamos esta propiedad para registrar cual es el disco seleccionado en la lista
+        private Disco discoSeleccionado;
+
+        public Disco DiscoSeleccionado
+        {
+            get { return discoSeleccionado; }
+            set
+            {
+                discoSeleccionado = value;
+                OnPropertyChanged();
+            }
+        }
+
         //en el constructor de la clase instanciamos la colección y le agregamos 3 discos
         public Datos()
         {
