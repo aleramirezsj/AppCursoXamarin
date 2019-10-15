@@ -17,11 +17,29 @@
 
         <ListView ItemsSource="{Binding Discos, Mode=TwoWay}"
                   SelectedItem="{Binding DiscoSeleccionado, Mode=TwoWay}"
+                  HasUnevenRows="True"
                   x:Name="lista">
             <ListView.ItemTemplate>
                 <DataTemplate>
-                    <TextCell Text="{Binding Titulo}"
-                              Detail="{Binding Banda}" />
+                    <ViewCell>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition />
+                            </Grid.ColumnDefinitions>
+
+                            <Image Source="{Binding Portada}"
+                                   Margin="10"
+                                   WidthRequest="200"
+                                   HeightRequest="200" />
+
+                            <StackLayout Grid.Column="1">
+                                <Label Text="{Binding Titulo}" FontSize="Large"/>
+                                <Label Text="{Binding Banda}" />
+                                <Label Text="{Binding Genero}" />
+                            </StackLayout>
+                        </Grid>
+                    </ViewCell>
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>

@@ -31,14 +31,30 @@ namespace AppCursoXamarin
             }
         }
 
-    //en el constructor de la clase instanciamos la colección y le agregamos 3 discos
-    public Datos()
-    {
-        Discos = new ObservableCollection<Disco>();
-        Discos.Add(new Disco() { Banda = "The beatles", Titulo = "Help!", Genero="Rock&Roll", FechaLanzamiento=new DateTime(1965,8,6) });
-        Discos.Add(new Disco() { Banda = "The beatles", Titulo = "Resolver!", Genero = "Rock&Roll", FechaLanzamiento = new DateTime(1966, 8, 6) });
-        Discos.Add(new Disco() { Banda = "The beatles", Titulo = "Let it be!", Genero = "Rock&Roll", FechaLanzamiento = new DateTime(1970, 5, 6) });
-    }
+
+        //en el constructor de la clase instanciamos la colección y le agregamos 3 discos
+        public Datos()
+        {
+            Discos = new ObservableCollection<Disco>();
+            Discos.Add(new Disco() {
+                Banda = "The beatles",
+                Titulo = "Help!",
+                Genero ="Rock&Roll",
+                FechaLanzamiento =new DateTime(1965,8,6),
+                Portada ="help.jpg" });
+            Discos.Add(new Disco() {
+                Banda = "The beatles",
+                Titulo = "Resolver!",
+                Genero = "Rock&Roll",
+                FechaLanzamiento = new DateTime(1966, 8, 6),
+                Portada ="revolver.jpg" });
+            Discos.Add(new Disco() {
+                Banda = "The beatles",
+                Titulo = "Let it be!",
+                Genero = "Rock&Roll",
+                FechaLanzamiento = new DateTime(1970, 5, 6),
+                Portada ="letitbe.jpg" });
+        }
 
     }
 }

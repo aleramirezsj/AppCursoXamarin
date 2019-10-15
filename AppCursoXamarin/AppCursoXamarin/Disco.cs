@@ -57,6 +57,18 @@ namespace AppCursoXamarin
             }
         }
 
+        private string portada;
+
+        public string Portada
+        {
+            get { return portada; }
+            set
+            {
+                portada = value;
+                OnPropertyChanged();
+            }
+        }
+
 
         //solución rápida en el video 36, que resuelve la falta de plantilla de datos para
         //ajustar lo que se visualiza del listview
