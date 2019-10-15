@@ -68,6 +68,17 @@ namespace AppCursoXamarin
                 OnPropertyChanged();
             }
         }
+        private decimal precio;
+
+        public decimal Precio
+        {
+            get { return precio; }
+            set
+            {
+                precio = value;
+                OnPropertyChanged();
+            }
+        }
 
 
         //solución rápida en el video 36, que resuelve la falta de plantilla de datos para

@@ -41,19 +41,22 @@ namespace AppCursoXamarin
                 Titulo = "Help!",
                 Genero ="Rock&Roll",
                 FechaLanzamiento =new DateTime(1965,8,6),
-                Portada ="help.jpg" });
+                Portada ="help.jpg",
+                Precio=(decimal)4.5});
             Discos.Add(new Disco() {
                 Banda = "The beatles",
                 Titulo = "Resolver!",
                 Genero = "Rock&Roll",
                 FechaLanzamiento = new DateTime(1966, 8, 6),
-                Portada ="revolver.jpg" });
+                Portada ="revolver.jpg",
+                Precio=(decimal)5});
             Discos.Add(new Disco() {
                 Banda = "The beatles",
                 Titulo = "Let it be!",
                 Genero = "Rock&Roll",
                 FechaLanzamiento = new DateTime(1970, 5, 6),
-                Portada ="letitbe.jpg" });
+                Portada ="letitbe.jpg",
+                Precio=(decimal)8});
         }
 
     }
