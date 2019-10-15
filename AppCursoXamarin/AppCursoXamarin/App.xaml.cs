@@ -20,7 +20,8 @@ namespace AppCursoXamarin
             //MainPage = new MainPageEnlaceEntreElementos();
             //MainPage = new MainPageStringFormat();
             //MainPage = new MainPagePlantillaDeDatos();
-            MainPage = new MainPageConvertidoresDeValor();
+            //MainPage = new MainPageConvertidoresDeValor();
+            MainPage = new MainPageImplementacionComandos();
         }
 
         protected override void OnStart()

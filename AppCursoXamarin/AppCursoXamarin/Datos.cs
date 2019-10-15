@@ -8,6 +8,13 @@ namespace AppCursoXamarin
     public class Datos : NotificationObject
     {
         private ObservableCollection<Disco> discos;
+        //agregamos esta propiedad para registrar cual es el disco seleccionado en la lista
+        private Disco discoSeleccionado;
+        //agregamos una propiedad que implemente la interfaz ICommand para colocar código de 
+        //ejecución de un comando
+        public MyComand agregarDiscoCommand { get; set; }
+
+
 
         public ObservableCollection<Disco> Discos
         {
@@ -18,8 +25,7 @@ namespace AppCursoXamarin
                 OnPropertyChanged();
             }
         }
-        //agregamos esta propiedad para registrar cual es el disco seleccionado en la lista
-        private Disco discoSeleccionado;
+
 
         public Disco DiscoSeleccionado
         {
@@ -57,7 +63,25 @@ namespace AppCursoXamarin
                 FechaLanzamiento = new DateTime(1970, 5, 6),
                 Portada ="letitbe.jpg",
                 Precio=(decimal)8});
+
+            agregarDiscoCommand = new MyComand(agregarDiscoCommandExecute,agregarDiscoCommandCanExecute);
         }
+
+        private bool agregarDiscoCommandCanExecute()
+        {
+            return Discos.Count<10;
+        }
+
+        private void agregarDiscoCommandExecute()
+        {
+            Discos.Add(new Disco() { Banda = "Nirvana", Titulo = "Nevermind" });
+            agregarDiscoCommand.ReEvaluateCanExecute();
+
+        }
+
+
+
+       
 
     }
 }
