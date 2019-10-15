@@ -18,7 +18,8 @@ namespace AppCursoXamarin
             //MainPage = new MainPageContextoDeEnlaceDeDatos();
             //MainPage = new MainPageReto3();
             //MainPage = new MainPageEnlaceEntreElementos();
-            MainPage = new MainPageStringFormat();
+            //MainPage = new MainPageStringFormat();
+            MainPage = new MainPagePlantillaDeDatos();
         }
 
         protected override void OnStart()
